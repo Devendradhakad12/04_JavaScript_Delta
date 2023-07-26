@@ -349,3 +349,19 @@ return el % 10 == 0;
  };
  let finalvalue = arr3.reduce(min);
  console.log(finalvalue); */
+
+   
+ function max(msg,...argu){
+    console.log(argu)//collection of data, argu is a array;
+    argu.push(1) // no throw an error because argu is a array
+    console.log(argu)
+    argu.reduce((res,el)=>{
+        if(res > el){
+            console.log(msg,res) 
+        }else{
+            return el
+        }
+          
+    })
+}
+max("max is ",2,3,4,5,3)
