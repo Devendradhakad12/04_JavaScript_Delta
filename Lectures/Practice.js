@@ -104,8 +104,7 @@ console.log("..........................")
  
  */
 
-
- //! Qus.5 item exist or not
+//! Qus.5 item exist or not
 /*  let arr = ["ae",'a',23,43];
  let item = 23;
  if(arr.indexOf(item) !== -1){
@@ -114,7 +113,6 @@ console.log("..........................")
     console.log("item does not exist in array")
  } */
 
-
 //!Qus.6 print odd numbers
 /* console.log("👇 odd numbers")
  for(let i=0;i<=15;i++){
@@ -122,7 +120,7 @@ console.log("..........................")
         console.log(i)
     }
  } */
- //!Qus.7 print even number
+//!Qus.7 print even number
 /*  console.log("👇 even numbers")
  for(let i=0;i<=15;i++){
     if(i%2 === 0){
@@ -130,7 +128,7 @@ console.log("..........................")
     }
  } */
 
- //!Qus.8 multiplication table
+//!Qus.8 multiplication table
 
 /*  console.log("👇 multiplication table")
  let num = 5;
@@ -138,8 +136,7 @@ console.log("..........................")
         console.log(i*num);
  } */
 
-
- //!Qus.9 nested loop 
+//!Qus.9 nested loop
 /*  for(let i=1; i<=3; i++){
     console.log("outer loop ",i)
     for(let j=1; j<=3; j++){
@@ -147,21 +144,18 @@ console.log("..........................")
     }
   } */
 
- 
-
-  //! Qus.10 Delete given number from array
+//! Qus.10 Delete given number from array
 /* let arr = [2,3,4,5,7,8,9,1];
 let num = 3
  let index = arr.indexOf(num);
  arr.splice(index,1)
  console.log(arr) */
 
-
- //! Qus.11 Write a JS program to find the no. of digits in a number
- //? first way ->
-  /*   let numbers = 243443;
+//! Qus.11 Write a JS program to find the no. of digits in a number
+//? first way ->
+/*   let numbers = 243443;
 console.log('count of numbers = ',numbers.toString().length) */
-//? second way -> 
+//? second way ->
 /* let numbers1 = 243443;
 let count = 0;
 let copy1 = numbers1;
@@ -171,9 +165,8 @@ while(copy1 > 0){
 }
 console.log('count of numbers1 = ',count); */
 
-
- //! Qus.12 Write a JS program to add all digits in a number
- //? first way -->
+//! Qus.12 Write a JS program to add all digits in a number
+//? first way -->
 /*  let numbers2 = 243443;
  let numstr = numbers2.toString();
 let sum2 = 0;
@@ -182,7 +175,7 @@ for(let i=0;i<numstr.length;i++){
 }
  console.log('sum of numbers2 = ',sum2) */
 
- //? second way -->
+//? second way -->
 /*  let numbers3 = 243443;
 let sum3 = 0;
 let copy = numbers3;
@@ -193,7 +186,6 @@ while(copy > 0){
 }
 console.log('sum of numbers3 = ',sum3);  */
 
-
 //! Qus.13  Print the factorial of a number n.
 /* let num = 7;
 let factorial = 1;
@@ -201,14 +193,12 @@ for(i=1;i<=num;i++){
 factorial = i*factorial;
 }
 console.log("factorial of ",num," is ",factorial) */
-    
-
 
 //!Qus 14 create a program that generates a random number between 1 to 6
 /* let dice = Math.floor(Math.random()*6)+1;
 console.log(dice); */
- 
- //! Qus 15. create a fuction that return the sum of number 1 to n
+
+//! Qus 15. create a fuction that return the sum of number 1 to n
 /*  function sum(n){
   let  numsum = 0;
   let i = 1
@@ -220,7 +210,7 @@ console.log(dice); */
  }
  sum(10) */
 
- //! Qus 16. create a function that return the concatenation of all strings in array
+//! Qus 16. create a function that return the concatenation of all strings in array
 /*  function arrayConcate(arr){
 let str = '';
 if(typeof(arr) === 'object'){
@@ -266,7 +256,7 @@ unstr += str[i]
 
  unique(str) */
 
- //! Qus 19 Write a JavaScript function that accepts a list of country names as input and returns the longest country name as output
+//! Qus 19 Write a JavaScript function that accepts a list of country names as input and returns the longest country name as output
 /* 
  let country = ['Australia','united state of America','Germany']
  function largestname(arr){
@@ -318,7 +308,7 @@ count++
  avag(arr)
   */
 
- //! Qus 22 find the maximum value of array using reduce method
+//! Qus 22 find the maximum value of array using reduce method
 /*  let arr3 = [1, 3, 12, 4, 2, 5];
  let max = (result,el) => {
     if(result < el){
@@ -331,14 +321,14 @@ count++
  let finalvalue = arr3.reduce(max);
  console.log(finalvalue); */
 
- //! Qus 23 Check if all numbers in our array are multiples of 10 or not
+//! Qus 23 Check if all numbers in our array are multiples of 10 or not
 /*  let arr = [10,20,40,50,12,120];
  let mul = arr.every((el)=>{
 return el % 10 == 0;
  })
  console.log(mul) */
 
-  //! Qus 24 find the minimum value of array using reduce method
+//! Qus 24 find the minimum value of array using reduce method
 /*  let arr3 = [10, 3, 12, 4,1, 2, 5];
  let min = (result,el) => {
     if(result > el){
@@ -350,18 +340,19 @@ return el % 10 == 0;
  let finalvalue = arr3.reduce(min);
  console.log(finalvalue); */
 
-   
- function max(msg,...argu){
-    console.log(argu)//collection of data, argu is a array;
-    argu.push(1) // no throw an error because argu is a array
-    console.log(argu)
-    argu.reduce((res,el)=>{
-        if(res > el){
-            console.log(msg,res) 
-        }else{
-            return el
-        }
-          
-    })
-}
-max("max is ",2,3,4,5,3)
+//! Qus 25 Square and sum the array elements using the arrow function and then find the average of the array.
+/* let arr = [1, 2, 3, 4, 5];
+
+let SqSumAvg = (ar) => {
+  let sq = ar.map((ar) => {
+    return ar ** 2;
+  });
+  let sum = sq.reduce((res, el) => {
+    return res + el;
+  });
+  console.log("squer of arry ", sq);
+  console.log("sum of arry ", sum);
+  console.log("avarage of arry ", sum / ar.length);
+};
+
+SqSumAvg(arr); */
