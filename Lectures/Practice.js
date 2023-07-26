@@ -303,7 +303,7 @@ function genran(start,end){
     return Math.floor(Math.random()*dif) + start;
 }
 console.log(genran(start,end)) */
- let arr = [2,3,4,5];
+/*  let arr = [2,3,4,5];
  function avag(arr){
     let sum = 0;
     let count = 0;
@@ -316,3 +316,36 @@ count++
    
  }
  avag(arr)
+  */
+
+ //! Qus 22 find the maximum value of array using reduce method
+/*  let arr3 = [1, 3, 12, 4, 2, 5];
+ let max = (result,el) => {
+    if(result < el){
+        return el
+    }else{
+        return result
+    }
+ 
+ };
+ let finalvalue = arr3.reduce(max);
+ console.log(finalvalue); */
+
+ //! Qus 23 Check if all numbers in our array are multiples of 10 or not
+/*  let arr = [10,20,40,50,12,120];
+ let mul = arr.every((el)=>{
+return el % 10 == 0;
+ })
+ console.log(mul) */
+
+  //! Qus 24 find the minimum value of array using reduce method
+/*  let arr3 = [10, 3, 12, 4,1, 2, 5];
+ let min = (result,el) => {
+    if(result > el){
+        return el
+    }else{
+        return result
+    }
+ };
+ let finalvalue = arr3.reduce(min);
+ console.log(finalvalue); */

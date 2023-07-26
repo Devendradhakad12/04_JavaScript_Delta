@@ -91,7 +91,24 @@ let arr2 = Array.from(name2);
 console.log(typeof arr2);
 console.log(arr2);
 
+
 //15 includes() -  The includes() method in JavaScript is used to check if a string, array, or iterable contains a specified value. It returns true if the value is found and false otherwise. The method performs a case-sensitive search by default.
 const arrIn = ["Hello", "world!"];
 console.log(arrIn.includes("world!")); // Output: true
 console.log(arrIn.includes("foo")); // Output: false
+
+//16 every() - Returns true if ervery element of array gives true for some function. else returns false.
+let arrEvery = [1,2,3,4,6,5];
+ let every = arrEvery.every((e)=>{
+//return e % 2 == 0; //false
+return e < 7; //true
+})
+console.log(every)
+
+//17 some() - Returns true if some element of array gives true for some function. else returns false.
+let arrSome = [1,2,3,4,6,5];
+ let Some = arrSome.every((e)=>{
+//return e % 2 == 0; //true
+return e < 7; //true
+})
+console.log(Some)
