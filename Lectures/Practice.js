@@ -356,3 +356,43 @@ let SqSumAvg = (ar) => {
 };
 
 SqSumAvg(arr); */
+
+//! Qus 26 Create a new array using the map function whose each element is equal to the original element plus 5.
+/* let arr = [1,2,3,4,5];
+let newArr = arr.map((el)=>{
+    return el+5
+});
+console.log(newArr) */
+
+//! Qus 27 Create a new array whose elements are in uppercase of words present in the original array;
+/* let wordArr = ['ajay','find','deve','ground']
+let upperArr = wordArr.map((el)=>{
+return el.toLocaleUpperCase()
+})
+console.log(upperArr); */
+
+//! Qus 28  Write a function called doubleAndReturnArgs which accepts an array and a variable number of arguments.The function should return a new array with the original array values and all of the additional arguments doubled
+
+/* let doubleAndReturnArgs = (ar,...arr)=>[
+ ...ar,
+...arr.map((el)=>el*2)
+]
+console.log(doubleAndReturnArgs([1,2,3,4],2.5,3)) */
+
+//! Qus 29  Write a function called mergeObjects that accepts two objects and returns a new object which contains all the keys and values of the first object and second object.
+
+/* let obj1 ={
+    name:'dev',
+    age:19,
+    hoby:"coding"
+}
+let obj2={
+    class:'second year',
+    subject:"cs"
+     
+}
+
+let newObj = (obj1,obj2)=>{
+return {...obj1,...obj2}
+}
+console.log(newObj(obj1,obj2)) */
