@@ -50,7 +50,7 @@ let transform = function (str, fun) {
 };
 console.log(transform("hello im in higher order function", uppercase));
 
-//! 05. function returning another function
+//! 05. function returning another function - Higher oreder function
 // first method
 let compliment = function (msg) {
   return function (name) {
@@ -80,7 +80,7 @@ let person = {
 };
 console.log(`current age is ${person.ageCalc(2004)}`);
 
-//! 08 Function Expression  - function expression are not hoisted
+//! 08 Function Expression  - function expression are not hoisted - when we assign the function to a variable. 
 const funcExpress = function (a, b) {
   return a + b;
 };
