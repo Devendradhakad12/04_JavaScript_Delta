@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>35_DOM-05.html - ClassList</title>
+  </head>
+  <body>
+    <div
+      class="firclass secondClass red dev"
+      id="first"
+      data-game="pubg"
+      data-player="ajay"
+    >
+      This is first div
+    </div>
+    <script>
+      let firstDiv = document.getElementById("first");
+      console.log(firstDiv.classList);
+
+      //1. add ClassList - add new classes
+      firstDiv.classList.add("lastClassJS");
+      console.log(firstDiv.classList);
+
+      //2. remove class
+      firstDiv.classList.remove("red");
+      console.log(firstDiv.classList);
+
+      //3. contais - to check if class exist.  if class exist return true else return false
+      console.log(firstDiv.classList.contains("red"));
+      console.log(firstDiv.classList.contains("dev"));
+
+      //4. toggle - toggle between add & remove
+      console.log("👇------------toggle👇")
+      firstDiv.classList.toggle("green");
+      console.log(firstDiv.classList);
+      firstDiv.classList.toggle("green");
+      console.log(firstDiv.classList);
+      firstDiv.classList.toggle("green");
+      console.log(firstDiv.classList);
+ 
+
+    </script>
+  </body>
+</html>

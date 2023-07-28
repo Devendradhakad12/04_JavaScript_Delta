@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>33_DOM-03:-> Setting content in Dom object</title>
+  </head>
+  <body>
+    <h1>Devendra Dhakad</h1>
+    <p>
+      this is a paregraph j Lorem ipsum dolor sit,
+      <a style="display: none" href="#">ancor tag</a>consectetur adipisicing
+      elit. Ex, porro.<em>pavan</em>
+    </p>
+    <div>thos is div tag</div>
+    <span id="spn"></span>
+
+    <h1 id="he">Helo</h1>
+    <p class="para">this is first <em>p</em></p>
+    <p class="para">this is second p</p>
+    <p class="para">this is third p</p>
+    <ul>
+      <li>first li</li>
+      <li>second li</li>
+      <li>third li</li>
+    </ul>
+
+    <div>
+      <h3>this is first h3</h3>
+      <h3>this is second h3</h3>
+      <h3>this is third h3</h3>
+    </div>
+
+    <script>
+      //Using Properties & Methods
+
+      let para = document.querySelectorAll("p");
+
+      //1. innerText - Shows the visible text containd in a node;
+      console.log(para[0].innerText);
+      para[1].innerText = `innerText <b>Changed by innerText</b> ${para[1].innerText}`;
+
+      //2. textContent - Shows all the full text
+      console.log(para[0].textContent); // anchor tag is visble whatever it's display none or visibale
+      para[2].textContent = `textContent <b>Changed by textContent</b> ${para[2].innerText}`;
+
+      //3. innerHtml - Show the full markup
+      console.log(para[0].innerHTML); // anchor tag is not visible because it's display is none
+      para[3].innerHTML = `innerHtml <b>Changed by innerHtml</b> ${para[3].innerText}`;
+
+
+      
+    </script>
+  </body>
+</html>

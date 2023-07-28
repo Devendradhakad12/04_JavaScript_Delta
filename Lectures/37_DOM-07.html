@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>37_DOM-07 :- Adding Elements</title>
+  </head>
+  <body>
+    <div>thos is div tag <span id="spn">this span child of div</span></div>
+    <ul id="ul">
+      <li>first li</li>
+      <li>second li</li>
+      <li>last li</li>
+    </ul>
+    <div id="myDiv">Old myDiv Content</div>
+    <div id="remove">This is remove div <span> removeChild</span></div>
+    <script>
+      //1. create Element
+      let p = document.createElement("p");
+      p.innerHTML = `<b>This para is created using js and added using appendChild</b>`;
+
+      //2. appendChild - The term "append" refers to adding an element or content at the ending of an existing container, such as an array or a ending.
+      let div = document.getElementsByTagName("div")[0];
+      div.appendChild(p);
+
+      //3. append - insert text or element in current element
+      p.append(" this is new appended text ");
+      let btn = document.createElement("button");
+      btn.append("click me");
+      p.append(btn);
+
+      //4. prepend -  The term "prepend" refers to adding an element or content at the beginning of an existing container, such as an array or a string.
+      let newDiv = document.getElementById("myDiv");
+      newDiv.prepend("'prepend' ");
+      newDiv.append(" 'append' ");
+
+      //5. insertAdjecent -  'insertAdjacentElement' allows you to insert an HTML element into the DOM relative to another element.
+      let insP = document.createElement("p");
+      insP.innerHTML = " <b>This text is added by insertAdjacent </b> ";
+      newDiv.insertAdjacentElement("beforebegin", insP);
+
+      //6. removeChild - In JavaScript, the removeChild() method is used to remove a specified child node from its parent in the DOM (Document Object Model).
+      let removeDiv = document.getElementById("remove");
+       removeDiv.removeChild(removeDiv.firstElementChild);
+       removeDiv.remove()
+    </script>
+  </body>
+</html>
