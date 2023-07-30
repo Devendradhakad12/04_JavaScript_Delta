@@ -7,6 +7,7 @@
   </head>
   <body>
     <button id="btn">Click ME</button>
+    <p id="para">This is a paragraph</p>
     <script>
       let btn = document.getElementById("btn");
 
@@ -23,8 +24,13 @@
         console.log('double clicked')
       })
 
+      //visit w3Schools for more
 
-      //visit w3Schools
+      //3. EventListener on Elements
+      let p = document.getElementById('para')
+      p.addEventListener('mouseenter',()=>{
+        p.innerHTML += ` clicked and your number ${Math.floor(Math.random()*100)}`;
+      })
     </script>
   </body>
 </html>

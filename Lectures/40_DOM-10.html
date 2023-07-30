@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>40_DOM-10 - this in Event Listeners</title>
+  </head>
+  <body>
+    <button class="btn">Click Me button</button>
+    <button class="btn">Click Me button</button>
+    <button class="btn">Click Me button</button>
+    <button class="btn">Click Me button</button>
+    <button class="btn">Click Me button</button>
+    <button class="btn">Click Me button</button>
+    <script>
+      //this - When 'this' is used in callback of event handler of something, it refers to that something.
+
+      let btn = document.getElementsByClassName("btn");
+      Array.from(btn).map((btn) => {
+
+        // 1. this with normal funaction - always use this with arrow function
+        btn.addEventListener("click", function () {
+          this.style.backgroundColor = "pink";
+          this.style.fontSize = "40px";
+          console.log(this.innerText);
+          console.log("Normal function - ", this); // return btn
+        });
+
+        //2. this with arrow function
+        btn.addEventListener("click", () => {
+          console.log("Arrow function - ", this); // return window
+        });
+      });
+    </script>
+  </body>
+</html>

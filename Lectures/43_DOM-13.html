@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>43_DOM-13 :-> Change & Input Events</title>
+  </head>
+  <body>
+    <form action="#">
+      <input type="text" placeholder="username" id="inp" />
+      <input type="password" placeholder="password" id="pas" />
+      <button id="btn">Submit & doubleClick</button>
+    </form>
+
+    <script>
+      //1. Change Event - The change event occure when the value of an elemet has been changed (only works of <input> , <textarea> and <select> elements).
+           let user = document.getElementById('inp');
+           user.addEventListener('change',function(e){
+            e.preventDefault()
+            console.log(user.value)
+           })
+
+      //2. Input Event - The input event fires when the value of an <input> , <select> or <textarea> elements has been changed.
+        let pass = document.getElementById('pas');
+        pas.addEventListener('input',function(e){
+            e.preventDefault()
+            console.log(pass.value)
+           })
+
+    </script>
+  </body>
+</html>
