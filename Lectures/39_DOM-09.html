@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>39_DOM-09 :-> Event Listener</title>
+  </head>
+  <body>
+    <button id="btn">Click ME</button>
+    <script>
+      let btn = document.getElementById("btn");
+
+      /* element.addEventListener(event,callback) */
+      /* for all eventlisteners visit mdn */
+
+      //1. click
+      btn.addEventListener('click',()=>{
+        console.log('clicked')
+      })
+
+      //2. doubleClick 
+      btn.addEventListener('dblclick',()=>{
+        console.log('double clicked')
+      })
+
+
+      //visit w3Schools
+    </script>
+  </body>
+</html>
