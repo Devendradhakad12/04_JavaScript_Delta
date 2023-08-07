@@ -398,23 +398,4 @@ return {...obj1,...obj2}
 console.log(newObj(obj1,obj2)) */
 
 //!------------------------------------------------
-
-function print(num, delay, nextNum) {
-  setTimeout(() => {
-    console.log(num);
-    if (nextNum) nextNum();
-  }, delay);
-}
-
-//? 👇 callback hell
-print(1, 1000, () => {
-  print(2, 1000, () => {
-    print(3, 1000, () => {
-      print(4, 1000,()=>{
-        print(5,1000)
-      });
-    });
-  });
-});
-
-
+  
