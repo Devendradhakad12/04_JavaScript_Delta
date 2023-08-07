@@ -4,7 +4,7 @@
     
 /* In JavaScript, variables are used to store values that can be accessed and manipulated throughout your code. JavaScript uses the var, let, and const keywords to declare variables. */
 
-/* 01. var: The var keyword was traditionally used to declare variables in JavaScript. However, it has some scoping quirks that can lead to unintended behavior, so it is generally recommended to use let and const instead. */
+/* 01. var: The var keyword was traditionally used to declare variables in JavaScript. However, it has some scoping quirks that can lead to unintended behavior, so it is generally recommended to use let and const instead.- global scope , local scope , function scope , class scope  */
 var x = 5;
 var message = "Hello, world!";
 
