@@ -14,15 +14,19 @@ console.log(err)
 
 //? fetch api using async function
 const fetchdata = async (url) => {
-    let data = await fetch(url);
-    let p = await data.json()
-    return p;
-  };
-  fetchdata(url)
-    .then((v) => {
-      console.log(v);
-    })
-    .catch((err) => {
-      console.log("throw error",err);
-    });
- fetchdata(url)
+  try {
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data.activity);
+
+    let res2 = await fetch(url);
+    let data2 = await res2.json();
+    console.log(data2.activity);
+  }
+   catch (error) {
+    console.log(error);
+  }
+};
+fetchdata(url);
+    
+ 

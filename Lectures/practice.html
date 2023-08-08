@@ -10,12 +10,21 @@
    
     </script> -->
     <script>
-     let json = '{ "activity": "Start a band","type": "music","participants": 4,"price": 0.3,"link": "","key": "5675880","accessibility": 0.8}'
-     console.log(json)
-     let jsonObj = JSON.parse(json)
-     console.log(jsonObj)
-     let jsonStr = JSON.stringify(jsonObj)
-console.log(jsonStr)
+      let url = "https://www.boredapi.com/api/activity";
+      const fetchdata = async (url) => {
+        try {
+          let res = await fetch(url);
+          let data = await res.json();
+          console.log("activity ", data.activity);
+          let res2 = await fetch(url);
+          let data2 = await res2.json();
+          console.log("activity ", data2.activity);
+
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchdata(url);
     </script>
   </body>
 </html>
