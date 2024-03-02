@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77_Hoisting</title>
+</head>
+<body>
+    <script>
+        //Following two lines will run successfuly  due to Javascript hoisting
+        console.log(a)
+        greet()
+        function greet(){
+            console.log(a)
+        }
+     /*    var greet = ()=>{
+            console.log(a)      //Function expressoins are not hoist
+        } */
+        var a = 9;//Decleration hoisted to the top but initaiolization is not
+     // let a = 9;  //cannot access 'a' before initialization
+        console.log(a)
+
+
+    </script>
+</body>
+</html>

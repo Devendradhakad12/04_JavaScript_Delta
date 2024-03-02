@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //01.Create a variable of type sting and try to add a number to  it 
+        var a = "pavan"
+        var b = 45
+        var c = a + b
+        console.log("Q.1  " + c)
+
+
+
+        //02.Use typeof operator to find the datatype of the string in last question
+        console.log("Q.2  " + typeof c)
+
+
+
+
+        //03.Create a const object in js  can you change it to hold a number later 
+        const newobj = {
+            name: "pavan",
+            Roll_no: 54,
+        }  //newobj = 34  ---> We will get error
+
+
+
+
+        //04.Try to add a new key to the const object in qus 3 were you able to do this 
+        console.log("Q.4  " + newobj["name"])
+        newobj["name"] = "ajay";
+        newobj["friend"] = "dev";
+        console.log("     " + newobj["name"])
+        console.log("     " + newobj["friend"])
+        console.log(newobj)
+
+
+
+
+
+
+
+        //05.Write a js program to create a word meaning dictionary of 5 words 
+        let dics = {
+
+            name: "Abnegation - Denial; renunciation of a doctrine or belief.",
+
+            name: "Ambigue - An ambiguous expression or statement",
+            name: " Athleisure - Comfortable and casual footwear & clothing designed for exercise and rigorous activity.",
+            name: " Blert - A cowardly person, someone who is weak.",
+            name: " Ebullient - Unrestrained joyously.",
+        };
+        console.log(dics)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    👉 Axios - Library to make Http Requests
+    <h1>Get random ctivity</h1>
+    <button id="btn">Get facts</button>
+    <p id="para"></p>
+    <input type="text" id="inp" placeholder="Enter Country"/>
+    <button id="btnsear" style="cursor: pointer;">Search</button>
+    <h1>All universities</h1>
+    <ul id="ul">
+
+    </ul>
+    <!-- cdn link of axios 👇 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      //  fetch data using Axios
+      let activity = null;
+      let btn = document.getElementById("btn");
+      let p = document.getElementById("para");
+      async function getData() {
+        let url = "https://www.boredapi.com/api/activity";
+        try {
+          let res = await axios.get(url);
+          return res.data.activity;
+        } catch (error) {
+          return "activity not found";
+        }
+      }
+
+      btn.addEventListener("click", async () => {
+        let activity = await getData();
+        p.innerHTML = activity;
+      });
+
+      // Sending Headers
+      async function getJoke() {
+        let url = "https://icanhazdadjoke.com/";
+        try {
+          const config = { headers: { Accept: "application/json" } };
+          let res = await axios.get(url, config);
+          console.log(res.data);
+        } catch (error) {
+          console.log("activity not found");
+        }
+      }
+      getJoke();
+
+      // Query
+      async function getUnivercityData(country) {
+        let url = `http://universities.hipolabs.com/search?name=${country}`;
+        try {
+          let res = await axios.get(url);
+          return res.data;
+        } catch (error) {
+          console.log("activity not found");
+        }
+      }
+
+      let search = document.getElementById("btnsear");
+
+      search.addEventListener("click", async () => {
+        let ul = document.getElementById('ul')
+        let inpval = document.getElementById("inp");
+        let data = await getUnivercityData(inpval.value);
+        ul.innerHTML = ""
+        data.forEach((clg) => {
+            let lis = document.createElement('li')
+            lis.innerHTML += `${clg.name}`
+            ul.appendChild(lis)
+            if(clg.alpha_two_code === "US"){
+                console.log(clg.alpha_two_code);
+
+            }
+           
+        });
+      });
+    </script>
+  </body>
+</html>

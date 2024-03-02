@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_using loops</title>
+</head>
+<body>
+    <script>
+
+        //1.for loop
+        let num = [3, 5, 5 , 6]
+        console.log("//...for loop")
+        for(let i=0; i<num.length;i++){
+            console.log(num[i])
+        } 
+
+
+
+        //2.for....of loop
+        console.log("//...for..of  loop")
+        for(let j of num){
+           console.log(j)
+        }
+
+
+        //3.for....in loop  - return key
+        console.log("//...for..in  loop")
+        for(let j in num){
+           console.log(num[j])
+        }
+
+
+        //4.forEach loop
+   /*      a.forEach((value,index,array)=>{
+           function logic 
+        }) */
+        num.forEach((e) =>{
+        console.log(`squer of ${e} is ` ,e*e)
+        })
+
+
+
+         //5.Array.from --> used to create an array from other object
+         let name  =  "pavan"
+         console.log(name)
+         console.log(typeof name)
+         let arr = Array.from(name)
+         console.log(typeof arr)
+         console.log( arr)
+
+
+
+
+    </script>
+</body>
+</html>

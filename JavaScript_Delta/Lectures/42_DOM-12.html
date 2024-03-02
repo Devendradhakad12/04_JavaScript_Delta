@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>42_DOM-12 :-> Extracting From Data</title>
+  </head>
+  <body>
+    <form action="/action">
+      <input type="text" placeholder="username" id="inp" />
+      <input type="password" placeholder="password" id="pas" />
+      <button id="btn">Submit & doubleClick</button>
+    </form>
+
+    <script>
+      //1. Extracting From Data
+      let form = document.querySelector("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let username = this.elements[0].value;
+        let password = this.elements[1].value;
+        console.log(username);
+        console.log(password);
+      });
+    </script>
+  </body>
+</html>

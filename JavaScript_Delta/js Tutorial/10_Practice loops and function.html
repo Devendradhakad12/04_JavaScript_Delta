@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_Practice loops and function</title>
+</head>
+<body>
+<script>
+    //Q1. Write a program to print the marks of a student in an object using for loop 
+    let marks = {
+        pavan:98,
+        rohan:70,
+        rakesh:7
+    }
+    console.log("//For loop---->")
+for(let i=0; i<Object.keys(marks).length;i++){
+
+    console.log("The marks of "+ Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
+
+}
+ 
+
+
+    //Q2. Write the program in Q1 using for in loop
+
+console.log("//For in loop---->")
+    for(let a in marks){
+        
+        console.log("marks of  " + a + "  is  " + marks[a])
+    }
+
+
+
+
+
+
+    //Q3. Write a program to print "try again" until the user enter the corract number
+
+ /*    let num 
+    let cn = 4
+while(num != cn){
+    num = prompt("Enter your number ")
+   if (num != cn){ 
+    alert( "your number "+ num + " is not corract try again")
+}else{
+    alert( "your number "+ num + " is corract")
+    console.log("your number is corract")
+}
+
+} */
+
+
+
+
+
+
+     //Q4.Write a funnction to find mean of 5 number
+
+     const mean = (a, b, c, d) =>{
+        return (a+b+c+d)/4
+
+     }
+     console.log(mean(3,9,6,2))
+
+
+</script>
+</body>
+</html>

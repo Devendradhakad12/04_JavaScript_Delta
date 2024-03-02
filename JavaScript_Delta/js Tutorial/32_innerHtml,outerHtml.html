@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>32_innerHtml,outerHtml</title>
+  </head>
+  <body>
+    <!-- hello -->
+    <div>
+      <span id="first">This is span</span>
+      <span id="second">This is span2</span>
+      <span id="third" hidden>I am hidden</span>
+    </div>
+    <script>
+      //1.Different Between log and dir
+      console.log(document.getElementsByTagName("span")[0]);
+      console.dir(document.getElementsByTagName("span")[0]);
+
+      //2.node name and tagName
+      console.log(document.body.firstChild.nodeName);
+      console.log(document.body.firstElementChild.nodeName);
+
+      //3.innerHtml or outerHtml
+      let first = document.getElementById("first");
+      first.innerHTML = `<i>Hey i am first`;
+      console.log(first.innerHTML);
+
+      let second = document.getElementById("second");
+      second.outerHTML = "<div>i am dev</div>";
+      console.log(second.outerHTML);
+
+      //4.Data and value
+      console.log(document.body.firstChild.data);
+      console.log(document.body.firstChild.value);
+
+      //5.textContent
+      console.log(document.body.textContent); //Get all data of website
+      console.log(first.textContent);
+
+      //hidden
+      document.getElementById("third").hidden = false;
+    </script>
+  </body>
+</html>

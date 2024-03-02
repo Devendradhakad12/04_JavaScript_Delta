@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_DOM practics set</title>
+</head>
+<style>
+    ul{
+        display: flex;
+    }ul li{
+        padding: 10px;
+        list-style: none;
+    }
+</style>
+<body>
+    <nav>
+        <ul>
+            <li class="list">Home</li>
+            <li class="list">About</li>
+            <li class="list">Section</li>
+            <li class="list">Blog</li>
+            <li class="list">Login</li>
+        </ul>
+        <table border="2px" cellspacing="0">
+            <tr>
+              
+                <td>gheloo</td>
+                <td>gheloo</td>
+                <td>gheloo</td>
+                <td>gheloo</td>
+            </tr>
+            <tr>
+                <td>gheloo</td>
+                <td>gheloo</td>
+                <td>gheloo</td>
+                <td>gheloo</td>
+            </tr>
+        </table>
+    </nav>
+    <script>
+
+        //Q1.Create a navbar and change the color of its first element to red.
+let list = document.getElementsByClassName('list')[0]
+list.style.color="red"
+
+
+
+
+        //Q2.Create a table without tbody now use "viwe page source" and "Elements" button to chack whether it has a tbody
+
+
+
+        //Q3.create an element with 3 childern now change the color of first and last element to green
+        document.getElementsByTagName('ul')[0].firstElementChild.style.color ="green"
+        document.getElementsByTagName('ul')[0].lastElementChild.style.color ="green"
+
+
+
+
+        //Q4.Write a javascript code to change background of <li> tage to cyan
+           Array.from( document.getElementsByTagName('li')).forEach(element => {
+                element.style.background = "cyan"
+            });
+
+
+
+
+
+
+
+            //Q5.Which of the following is used to look for the farthest ancestor that matches a given css selector
+            // (a).Matches  (b).Closest  (c).contains  (d).none of these
+
+
+
+ 
+    </script>
+</body>
+</html>

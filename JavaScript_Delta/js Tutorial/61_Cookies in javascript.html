@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>61_Cookies in javascript</title>
+</head>
+<body>
+    <script>
+        console.log(document.cookie)
+        document.cookie = "name=dev09983999"
+        document.cookie = "name2=pavanddndjnjn3"
+        document.cookie = "name=dev"
+        let key = prompt("enter your key")
+        let value = prompt("enter your value")
+        document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+        console.log(document.cookie)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66_Classes and object</title>
+</head>
+<body>
+    <script>
+     class Form{
+        submit(){
+            alert(this.name + " : form submitted for trainNo. "+ this.trainNo)
+        }
+        cancel(){
+            alert(this.name + " : This  form  is cancelled for trainNo." + this.trainNo)
+        }
+        fill(givenName,trainNo){
+            this.name = givenName
+            this.trainNo = trainNo
+        }
+     }
+     //Create a form for harry
+     let pavanForm = new Form()
+     //Fill the form with pavan's details
+     pavanForm.fill("pavan",1223)
+     //Create a form for Rohan
+     let ajayForm = new Form()
+         //Fill the form with ajay's details
+     ajayForm.fill("ajay",22232)
+  
+     pavanForm.submit()
+     ajayForm.submit()
+     ajayForm.cancel()
+
+    </script>
+</body>
+</html>

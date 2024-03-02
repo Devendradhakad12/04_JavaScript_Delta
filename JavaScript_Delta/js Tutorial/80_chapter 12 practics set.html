@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //Q1.Write a javaScript program to print the following after 2 second delay  ===> Hello World
+      const a = async (text) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(text);
+          }, 2000);
+        });
+      };
+      (async () => {
+        let text = await a("Hello");
+        console.log(text);
+        text = await a("World");
+        console.log(text);
+      })();
+
+
+
+      //Q2.Write a javaScript program to find avarage of numbers in an array using spread syntax
+      function avg(a,b,c) {
+        return a+b+c;
+      }   
+      let num = [2,4,3]
+    console.log(avg(...num))
+
+
+
+    //Q3.Write a javascript function which resolve a promise after n second . The function takes n as the parameters . Use an IIFE to excute the function with diffind value of n 
+   let re = async (text,n)=> {
+        return new Promise ((resolve,reject)=>{
+            setTimeout(() => {
+                resolve(text)
+            },1000*n);
+        })
+        
+    }
+    (async()=>{
+let a = await re("I am resolving after 1 second",1)
+console.log(a)
+ a = await re("I am resolving after 3 second",3)
+console.log(a)
+    })()
+
+
+
+
+
+
+
+    //Q4.write a simple intrest calculator using javascript
+    function simpleInterest(P,r,t){
+        return (P*r*t)/100;
+    }
+    console.log(simpleInterest(1000,5,1))
+
+    </script>
+  </body>
+</html>

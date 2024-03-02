@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ const x = {
+    name:"pavan",
+    role:"js developer",
+    exp:30,
+    show:function () {
+        let that = this
+console.log(this)
+         setTimeout(function() {
+            console.log(`The name is ${this.name} \n The role is ${this.role}`) 
+            //console.log(`The name is ${that.name} \n The role is ${that.role}`)
+        }, 2000); 
+        setTimeout(() => {
+            console.log(`The name is ${this.name} \n The role is ${this.role}`)  
+        }, 3000);
+    }
+ }
+ x.show()
+    </script>
+</body>
+</html>

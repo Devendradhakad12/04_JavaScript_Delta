@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23_practice set</title>
+</head>
+<body id="body">
+    <script>
+        //Q1.Write a program using prompt function to take input of age as a value from user and use alert to tell him if he can drive
+/*         let age = prompt("Enter your age")
+        age = Number.parseInt(age)
+        const canDrive = (age)=>{
+            return age>=18?true:false
+        }
+        if(canDrive(age)){
+            alert("You can drive because your is "+ age )
+        }else{
+            alert("You can't drive")
+        }*/
+
+
+
+
+
+
+
+        //Q2.In Q1 use confirm to ask the user if he wants to see the  prompt again
+ /*        let   con = true;
+        while(con){
+
+    let age = prompt("Enter your age")
+        age = Number.parseInt(age)
+        const canDrive = (age)=>{
+            return age>=18?true:false
+        }
+        if(canDrive(age)){
+            alert("You can drive because your is "+ age )
+        }else{
+            alert("You can't drive")
+        }
+        con = confirm("Can you want to enter again ")
+}
+ */
+
+
+
+
+
+
+        //Q3.in the previous question use console.error to log the error if age enterd is nagetive
+
+/*         let   con = true;
+        while(con){
+
+    let age = prompt("Enter your age")
+        age = Number.parseInt(age)
+        const canDrive = (age)=>{
+            return age>=18?true:false
+        }
+        if(canDrive(age)){
+            alert("You can drive because your is "+ age )
+        }else if(age<0){
+            console.error("the age is nagetive")
+            alert("The age is nagetive please enter the valid age")
+        }
+        else{
+            alert("You can't drive")
+        }
+        con = confirm("Can you want to enter again ")
+}
+ */
+
+
+
+
+
+     //Q4.Write a program to  change the url to  google.com (redirection) if user enters a number greater than  4
+/*      let num = prompt("Enter the number")
+     num = Number.parseInt(num)
+     if(num>4){
+        location.href = "https://google.com"
+     }else{
+        alert("enter again")
+     } */
+
+
+
+
+
+     //Q5.Change the background of  page to yellow red or any other color based on user  input through prompt
+     let color = prompt("Enter the color")
+
+     let body = document.getElementById("body")
+
+body.style.backgroundColor = color
+    </script>
+</body>
+</html>

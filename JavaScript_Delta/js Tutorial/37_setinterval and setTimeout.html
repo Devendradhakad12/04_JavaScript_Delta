@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37_setInterval and setTimeout</title>
+</head>
+<body>
+    <script>
+ 
+        //1.setTimeout - Run Function "once" after "interval" of time.
+         function greeting(name){
+            document.write("Welcome " + name)
+         }
+         setTimeout(greeting,2000,"dev") // 3000ms = 3sec
+    /*    let a = setTimeout(() => {
+            alert("I am set time out")
+        }, 3000);
+        let b =  confirm('can you want to cancel timeout')
+        if(b==true){
+            clearTimeout(a)
+        }
+         console.log(a)
+
+         const sum = (a,b) =>{
+document.write("The sum of "+ a + "+" + b +"=" + (a+b) + " , ")
+console.log("The sum of "+ a + "+" + b +"=" + (a+b))
+         }
+         setTimeout(sum,3000,1,2) */
+
+
+
+        //2.setInterval -  Run Function repeatedly, Starting after the interval of time, then repeating....
+      /*   function greeting(){
+         document.write('setinterval ')
+         }
+         setInterval(greeting,3000) */
+
+       // setInterval(sum,3000,2,3)
+    /*    let a = setInterval(() => {
+            alert("I am setInterval")
+        }, 3000);
+        let b =  confirm('can you want to cancel Interval')
+        if(b!=true){
+            clearInterval(a)
+        } */
+ 
+
+    </script>
+</body>
+</html>

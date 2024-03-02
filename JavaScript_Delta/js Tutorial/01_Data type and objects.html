@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTypes and objects</title>
+  </head>
+  <body>
+    <script>
+      //Primitive Data type
+      // nn bb ss u
+      //null number bigInt boolean string symbol undifind
+      let a = null;
+      let b = 34;
+      let c = BigInt(6) + BigInt("4");
+      let d =Boolean(""); // also can be  false // empty string returns false
+      let e = "pavan";
+      //let f = symbol("pavan")
+      let g = undefined;
+      let h;
+      console.log(a, b, c, d, e, g);
+      console.log(typeof(c));
+      console.log(d,typeof(d));
+      console.log(typeof (h));
+    
+      // Non primitive Data type - Objects in js
+      const item = {
+        pavan: 34,
+        dev: 54,
+        jay: 43,
+      };
+      let propertyname = "dev";
+      console.log(item["pavan"]);
+      console.log(item.jay);
+      console.log(item[propertyname])
+      console.log(item.propertyname)
+
+      //Modify The object
+    item.pavan = 34444;
+    console.log(item["pavan"]);
+
+    //Delete properties of object
+    delete item["jay"]
+    console.log(item.jay);
+ 
+ 
+      </script>
+  </body>
+</html>

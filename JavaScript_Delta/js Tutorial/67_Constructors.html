@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>67_Constructors</title>
+</head>
+<body>
+    <script>
+     class Form{
+        constructor(givenName,trainNo,address){
+            console.log("Constructor Called...." + givenName + " and "+ trainNo)
+            this.name = givenName
+            this.trainNo = trainNo
+            this.address = add
+        }
+        preview(){
+            alert(this.name + " : Your form is  for trainNo. "+ this.trainNo + " and your address is   " + this.address)
+        }
+        submit(){
+            alert(this.name + " : form submitted for trainNo. "+ this.trainNo)
+        }
+        cancel(){
+            alert(this.name + " : This  form  is cancelled for trainNo." + this.trainNo)
+        }
+     
+     }
+     //Create and fill a form for harry
+     let pavanForm = new Form("pavan",1223,"Mandasur M.P")
+     //No Need To Fill the form with pavan's details
+    
+     //Create and fill a form for Rohan
+     let ajayForm = new Form("ajay",22232)
+       
+    
+  pavanForm.preview()
+    // pavanForm.submit()
+     //ajayForm.submit()
+     //ajayForm.cancel()
+
+    </script>
+</body>
+</html>

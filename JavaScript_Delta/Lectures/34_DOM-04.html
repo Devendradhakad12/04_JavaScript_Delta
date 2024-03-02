@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>34_DOM-04 :-> Atrributes Method</title>
+  </head>
+  <body>
+    <div class="firclass" id="first" data-game="pubg" data-player="ajay">
+      This is first div
+    </div>
+    <h3>This is h3 tag</h3>
+    <script>
+      //1.getAttribute
+      let first = document.getElementById("first");
+      let a = first.getAttribute("class");
+      console.log("getAttribute - ",a);
+      console.log(first);
+
+      //2.hasAtrribute - Defines whether the attribute is present in the element
+      console.log(first.hasAttribute("class"));
+      console.log(first.hasAttribute("style"));
+
+      //3.setAtrribute
+      //first.setAttribute('hidden','true')
+      first.setAttribute("class", "dev pavan");
+      let b = first.getAttribute("class");
+      console.log("setAttribute - ",b);
+      console.log(first);
+
+      //4.atrributes
+      let at = first.attributes;
+      console.log(at);
+
+      //5.remove
+      first.removeAttribute("class");
+      let c = first.getAttribute("class");
+      console.log(c);
+      console.log(first);
+
+      //6.data-atrributename
+      let dataset = first.dataset; //find dataset of our custom attribute ... always set the name of custom attributes with data
+      console.log(dataset);
+      let player = first.dataset.player;
+      console.log(player);
+      let game = first.dataset.game;
+      console.log(game);
+
+      //7. set Styling - style property are access inline style ,  it's not access css style's
+      let h3 = document.getElementsByTagName('h3')[0]
+      h3.style.color = 'red';
+      h3.style.fontSize = '40px';
+      h3.style.backgroundColor = 'black'
+
+    </script>
+  </body>
+</html>

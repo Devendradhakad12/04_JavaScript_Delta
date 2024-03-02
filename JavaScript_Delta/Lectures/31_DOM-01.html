@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_DOM_01</title>
+</head>
+<body>
+
+<h1></h1>
+
+    <script>
+        console.dir(document)// html document object  - we print document in console using dir
+        console.log(document.body)
+        let fu = document.body
+        for(let a in fu){
+            document.write(a,",--- ")
+        }
+       
+        console.log(document.documentElement)
+    </script>
+</body>
+</html>

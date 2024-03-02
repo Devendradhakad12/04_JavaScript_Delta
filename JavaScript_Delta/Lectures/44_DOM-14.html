@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43_DOM-13 :-> Event Bubbling</title>
+    <style>
+        div{
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+        }
+        ul{
+            background-color: blue;
+        }
+        li{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>li 1</li>
+            <li>li 2</li>
+        </ul>
+    </div>
+    <script>
+        // When an event is triggered on a DOM element, such as a mouse click or key press, it doesn't just affect that specific element; instead, it triggers the event on the target element and then "bubbles up" through its ancestors in the DOM hierarchy, all the way up to the document root. During this process, each ancestor's event handlers, if present, have the opportunity to respond to the event.
+
+        let div = document.querySelector('div')
+        let ul = document.querySelector('ul')
+        let li = document.querySelector('li')
+
+        div.addEventListener('click',()=>{
+            event.stopPropagation();
+            console.log('div was clicked')
+        })
+        ul.addEventListener('click',()=>{
+            event.stopPropagation();
+            console.log('ul was clicked')
+        })
+        li.addEventListener('click',()=>{
+            event.stopPropagation();
+            console.log('li was clicked')
+           
+        });
+
+    // However, sometimes, you may want to stop the event from propagating further up the DOM tree. You can achieve this by calling the stopPropagation() method on the event object within your event handler. For example:👆
+    
+    </script>
+</body>
+</html>

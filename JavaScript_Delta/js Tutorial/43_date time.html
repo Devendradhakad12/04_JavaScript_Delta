@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+body{
+    background-color: black;
+    color: white;
+}.contain{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 89vh;
+    flex-direction: column;
+}
+#spn{
+    background-color: rgb(54, 40, 48);
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4px;
+    font-size: 30px;
+    font-family: cursive;
+
+}
+#spn1{
+    background-color: rgb(33, 6, 21);
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4px;
+    font-size: 30px;
+    font-family: cursive;
+    
+
+}
+    
+    </style>
+</head>
+<body>
+    <div class="contain">
+    <div class="date"><br><span id="spn"></span></div>
+    <div class="time"> <br>  <span id="spn1"></span></div>
+</div>
+    <script>
+
+       
+        setInterval(() => {
+                  
+      let a = new Date()
+let date = a.getDate()
+let mont = a.getMonth()
+let year = a.getFullYear()
+let day = a.getDay()
+let d = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][day]
+
+
+
+            let h = a.getHours()
+        let m = a.getMinutes()
+        let s = a.getSeconds()
+        let spn1 = document.getElementById('spn1')
+        let spn = document.getElementById('spn')
+       spn1.textContent = h + ":" + m +":"+ s 
+       spn.textContent = date + "-" + mont + "-" + year + "  " + d
+       
+        }, 1000);
+       
+    </script>
+</body>
+</html>

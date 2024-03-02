@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_Practics Opretors and Conditionals</title>
+</head>
+<body>
+    <script>
+
+        //Q1.Use logical operators to find whether the age  of a person lies between 10 and 20 ?
+        let age = 20
+        age = Number.parseInt(age)
+        if(age>10 && age<20){
+            console.log("your age lies between 10 and 20")
+        }else{
+            console.log("your age doesnt lies between 10 and 20")   
+        }
+
+
+
+        //Q2.Demonstrate the use of switch case statements in javaScript
+
+        switch (age) {
+            case 10:
+                console.log("your age is 10")
+                break;
+                case 20:
+                console.log("your age is 20")
+                break;
+        
+            default:
+            console.log("your age is not special")
+                break;
+        }
+
+
+
+
+
+        //Q3.Write a javascript program to find whether a number is Divisible by 2 or 3
+        let a = 5
+        if(a%3 == 0 && a%2 == 0 ){
+            console.log(` ${a} is divide by two and three `)
+        }
+else{
+    console.log(` ${a} is not divide by either two and three `)
+}
+
+
+
+
+
+         //Q4.Write a javascript program to find whether a number is divisible by eithr 2 or 3
+         let b = 4 
+         if(b%3 == 0){
+            console.log(` ${b} is divide by three `)
+        }
+         else if(b%2 == 0 ){
+            console.log(` ${b} is  divide by two `)
+         }
+        else{
+    console.log(` ${b} is not divide by two and three `)
+}
+
+
+
+        //Q5.print "you can drive" or "you cannot drive" based on age being greater then 18 using ternary operator
+
+        let age1 = 34;
+        let p = age1>18? "you can drive" :"you cannot drive"
+        console.log(p)
+  
+
+    </script>
+</body>
+</html>

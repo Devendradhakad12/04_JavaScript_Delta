@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_practic set</title>
+</head>
+
+<body>
+    <button onclick="alert('this is first');">first</button>
+    <button onclick="alert('this is second');">second</button>
+    <button onclick="alert('this is third');">third</button>
+    <button onclick="alert('this is forth');">forth</button>
+    <h1>Bookmarks</h1>
+    <button id="google">Google</button>
+    <button id="fb">Facebook</button>
+    <button id="yt">Youtube</button>
+    <button id="insta">Instragram</button>
+    <script>
+        //1.write a program to show different alerts when different buttons are clicked
+
+
+
+        //2.create a website which is capable of storing bookmarks of your favorite website usinng eventlistners
+
+          let google = document.getElementById('google')
+          let fb = document.getElementById('fb')
+          let yt = document.getElementById('yt')
+          let insta = document.getElementById('insta')
+
+google.addEventListener('click',go)
+function go(){
+    var url = "https://www.google.com/search?q=javascript"
+    var win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+fb.addEventListener('click',face)
+function face(){
+    let url = "https://www.facebook.com"
+    let win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+yt.addEventListener('click',ytu)
+function ytu(){
+    let url = "https://www.youtube.com"
+    let win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+insta.addEventListener('click',ins)
+function ins(){
+    let url = "https://www.instagram.com"
+    let win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus()
+}
+
+
+
+
+
+//3.write a javascript program to keep fetching contents of a website(rvery 5 second) 
+/* setInterval(async function () {
+    let url = "api url"
+    console.log(await fetchContent(url))
+    
+},3000) */
+
+
+
+//4.create a glowing bulb effect using classlit toggle method in js
+//next chapter
+    </script>
+</body>
+
+</html>

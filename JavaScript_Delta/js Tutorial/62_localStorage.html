@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>62_localStorage</title>
+</head>
+<body>
+    <script>
+        let key = prompt("Enter the key")
+        let value = prompt("Enter the value")
+        localStorage.setItem(key,value)
+        console.log(`The value at ${key} is ${localStorage.getItem(key)}`)
+        if(key == "red" || key == "blue"){
+            localStorage.removeItem(key)
+        }
+        if(key == 0 ){
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>

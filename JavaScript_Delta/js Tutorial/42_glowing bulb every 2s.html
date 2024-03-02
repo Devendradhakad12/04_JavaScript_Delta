@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42_glowing bulb every 2s</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .con{
+        background-color: black;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+/*     .bulbglow{
+        background-color: yellow;
+    } */.bulb-container{
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="con">
+    <div id="bulb" class="bulb-container bulbglow"></div>
+</div>
+<script>
+    setInterval(() => {
+       // document.querySelector("#bulb").classList.toggle("bulbglow")
+       col()
+       
+    }, 200);
+function col() {
+    let math = Math.floor(Math.random()*4)
+       let color = ['red','white','hotpink','yellow'][math]
+      document.getElementById('bulb').style.backgroundColor = color
+}
+
+    
+</script>
+</body>
+</html>

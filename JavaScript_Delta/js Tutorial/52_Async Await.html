@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>52_Async Await</title>
+  </head>
+  <body>
+    <script>
+      async function Wheather() {
+        let delhiWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("31 deg");
+          }, 3000);
+        });
+        let bangloreWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("29 deg");
+          }, 6000);
+        });
+        /*   delhiWeather.then((value)=>{
+    console.log(value)
+    alert(value)
+  })
+  bangloreWeather.then(alert)*/
+        console.log("Fetching delhi Weather Please wait.....");
+        let delhiw = await delhiWeather;
+        console.log("delhi Weather is " + delhiw);
+        console.log("Fetching banglore Weather Please wait.....");
+        let bangw = await bangloreWeather;
+        console.log("banglore Weather is " + bangw);
+        return [delhiw, bangw];
+      }
+
+      let temp = async () => {
+        console.log("Hey i am temp I am now waiting");
+      };
+
+      let main = async () => {
+        let a = await Wheather();
+
+        let b = await temp();
+      };
+      main();
+    </script>
+  </body>
+</html>

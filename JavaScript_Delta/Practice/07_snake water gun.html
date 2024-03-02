@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_snake water gun game</title>
+</head>
+<body>
+    <script>
+       let inp  ;
+      
+        let i = 0;
+do{
+    let com = Math.floor(Math.random()*100)
+    inp = prompt("Enter s,w or g")
+       
+        if(inp=="s" || inp=="snake" || inp=="S" || inp=="Snake"){
+            if(com<30){
+             
+                document.write("You win      --        ")
+            }else if(com>70){
+             
+                document.write("computer win      --      ")
+            }else{
+                document.write("tie         --   ")
+            }
+        }
+        else if(inp == "w" || inp=="water" || inp=="W" || inp=="Water"){
+            if(com>70){
+                
+                document.write("You win      --      ")
+            }else if(com>0 && com<50){
+               
+                document.write("computer win       --        ")
+            }else{
+         
+                document.write("tie       --      ")
+            }
+        }
+        
+        else if(inp == "g" || inp=="gun" || inp=="Gun" || inp=="G"){
+            if(com<40){
+    
+                document.write("You win       --      ")
+            }else if(com>50){
+ 
+                document.write("computer win       --   ")
+            }else{
+                document.write("tie      --      ")
+            }
+        }
+        
+        
+        
+        
+        
+        
+        else{
+            alert("enter s,w or g")
+            let com = Math.floor(Math.random()*100)
+            inp = prompt("Enter s,w or g")
+            if(inp=="s" || inp=="snake" || inp=="S" || inp=="Snake"){
+            if(com<30){
+             
+                document.write("You win      --        ")
+            }else if(com>70){
+             
+                document.write("computer win      --      ")
+            }else{
+                document.write("tie         --   ")
+            }
+        }
+        else if(inp == "w" || inp=="water" || inp=="W" || inp=="Water"){
+            if(com>70){
+                
+                document.write("You win      --      ")
+            }else if(com>0 && com<50){
+               
+                document.write("computer win       --        ")
+            }else{
+         
+                document.write("tie       --      ")
+            }
+        }
+        
+        else if(inp == "g" || inp=="gun" || inp=="Gun" || inp=="G"){
+            if(com<40){
+    
+                document.write("You win       --      ")
+            }else if(com>50){
+ 
+                document.write("computer win       --   ")
+            }else{
+                document.write("tie      --      ")
+            }
+        }
+        
+        
+        }
+i++;
+    }while(i<3);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API </title>
+</head>
+<body>
+    <input type="submit" id="btn" value="submit">
+    <script>
+    
+    document.getElementById('btn').addEventListener('click',makerqu)
+  
+    //.then()
+    function makerqu(){
+        console.log("button clicked")
+        const promiseobj = fetch('60_Fetch1 Method.txt')
+        promiseobj.then((r)=>{
+            if(!r.ok){
+                throw Error(r.statusText)
+            }
+            return r.text()
+        }).then((v)=>{
+            console.log(v)
+        }).catch((err)=>{
+            console.log(err )
+        })
+    }
+
+    //Async Await
+    async function makerqu() {
+    try{
+        console.log("Button clicked")
+        const r = await fetch('60_Fetch Method.txt')
+        if(!r.ok){
+                throw Error(r.statusText)
+            }
+        const data = await r.text()
+        console.log(data)
+    }
+    catch (err){
+console.log(err)
+    }
+        
+    }
+
+
+
+
+
+ /*    //fetch json file 
+    //.then()
+    function makerqu(){
+        console.log("button clicked")
+        const promiseobj = fetch('60_Fetch Method.json')
+        promiseobj.then((r)=>{
+            if(!r.ok){
+                throw Error(r.statusText)
+            }
+            return r.json()
+        }).then((v)=>{
+            console.log(v)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
+ */
+
+
+      /*   //Async Await
+        async function makerqu() {
+    try{
+        console.log("Button clicked")
+        const r = await fetch('60_Fetch Method.json')
+        if(!r.ok){
+                throw Error(r.statusText)
+            }
+        const data = await r.json()
+        console.log(data)
+    }
+    catch (err){
+console.log(err)
+    }
+        
+    }
+
+     */
+
+    </script>
+</body>
+</html>

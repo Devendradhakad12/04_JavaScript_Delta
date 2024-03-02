@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+</head>
+<body>
+    <h1>Bookmarks</h1>
+    <button id="google">Google</button>
+    <button id="fb">Facebook</button>
+    <button id="yt">Youtube</button>
+    <button id="insta">Instragram</button>
+    <script>
+            let google = document.getElementById('google')
+          let fb = document.getElementById('fb')
+          let yt = document.getElementById('yt')
+          let insta = document.getElementById('insta')
+
+google.addEventListener('click',go)
+function go(){
+    var url = "https://www.google.com/search?q=javascript"
+    var win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+fb.addEventListener('click',face)
+function face(){
+    var url = "https://www.facebook.com"
+    var win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+yt.addEventListener('click',ytu)
+function ytu(){
+    var url = "https://www.youtube.com"
+    var win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+insta.addEventListener('click',ins)
+function ins(){
+    var url = "https://www.instagram.com"
+    var win = window.open(url, "" , "width=500,height=500,scrollbars=yes,resizable=yes");
+    win.focus();
+}
+    </script>
+</body>
+</html>

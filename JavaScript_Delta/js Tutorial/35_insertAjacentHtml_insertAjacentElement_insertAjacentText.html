@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35_insertAjacentHtml,insertAjacentElement,insertAjacentText</title>
+</head>
+<body>
+    before of first div
+    <div id="first">
+        
+        I am first div</div>after of first div
+    <script>
+let first = document.getElementById('first')
+
+ 
+//1.insertAdjacentHtml
+first.insertAdjacentHTML('beforebegin',"<h1>i am beforebegin</h1>")
+first.insertAdjacentHTML('beforeend',"<h1>i am beforeend</h1>")
+first.insertAdjacentHTML('afterbegin',"<h1>i am afterbegin</h1>")
+first.insertAdjacentHTML('afterend',"<h1>i am afterend</h1>")
+
+
+
+
+//2.insertAdjecentElement
+let a = document.createElement('li')
+a.textContent = "hello i am li"
+//first.insertAdjacentElement('beforebegin',a)
+//first.insertAdjacentElement('beforeend', a)
+//first.insertAdjacentElement('afterbegin', a)
+first.insertAdjacentElement('afterend',a)
+
+
+    </script>
+</body>
+</html>

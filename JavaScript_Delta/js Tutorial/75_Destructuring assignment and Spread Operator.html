@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>75_Destructuring assignment and Spread Operator</title>
+</head>
+<body>
+    <script>
+        let arr  = [10,34,64,76,32,43,66]
+        //No need to do this
+       // let a = arr[0]
+      //  let b = arr[1]
+
+      //Do this
+     /*    let [a,b,c,d,e, ...rest] = arr
+        console.log(a,b,c,d,e,rest) */
+
+    /*     let [a,,,b, ...rest] = arr
+        console.log(a,b,rest) */
+
+
+        let {a,b} = {a:1,b:2}
+        console.log(a,b)
+
+
+
+        //Spread Operator
+        let arr1  = [2,4,6]
+        let obj1 = {...arr1}
+        console.log(obj1)
+function sum(a,b,c) {
+   return a+b+c 
+}
+console.log(sum(...arr1))
+
+
+
+let obj2 = {
+name : "dev",
+company: "xyz",
+
+}
+console.log({...obj2,name:"pavan"})
+console.log({name:"pavan",...obj2})//this will print the obj2 object without changing any value
+
+    </script>
+</body>
+</html>

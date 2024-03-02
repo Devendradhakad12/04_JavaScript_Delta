@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_string practice set</title>
+</head>
+<body>
+    <script>
+        //Q1.What mill the following in java script -- console.log("var\"".length)
+        console.log("var\"".length)
+
+
+        //Q2.Explore the includes startwith & endwith function of string
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+        const word = 'fox';
+        const word1 = 'dog.'
+        console.log(sentence.includes(word))
+        console.log(sentence.startsWith(word))
+        console.log(sentence.endsWith(word1))
+        console.log(`The word "${word}" ${sentence.includes(word)? 'is':'is not'} in the sentence`)
+
+        
+
+        //Q3.Write a program to covert a given string to lowercase
+        console.log(sentence.toLowerCase())
+
+
+
+        //Q4.Extrect the amount out of this string "please give Rs 1000"
+        let str =  "please give Rs 1000"
+        let amount = str.slice("please give Rs ".length)
+        amount = Number.parseInt(amount)
+        console.log(typeof amount)
+        console.log(amount)
+
+
+
+        //Q5.Try to change 4th character of a give string were you able to do it
+        let name = "pavan"
+        name[3] = "e"
+        console.log(name)//name is not changed, because string is immutable
+        
+
+
+
+        
+    </script>
+</body>
+</html>

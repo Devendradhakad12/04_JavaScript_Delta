@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input print in browser</title>
+</head>
+<body>
+    <input type="number" placeholder="Enter a Decimal number">
+    <button id="btn" >submit</button>
+    <div><span id="spn"></span></div>
+    <script>
+       
+        let btn = document.getElementById("btn")
+        let spn = document.getElementById("spn")
+        btn.addEventListener('click', func)
+         function func(e){
+         let currbtn = e.currentTarget
+            let currinp = currbtn.previousElementSibling
+         let num = currinp.value
+           spn.textContent = num
+         currinp.value = ""
+           
+         
+
+     
+        }
+    </script>
+
+</body>
+</html>

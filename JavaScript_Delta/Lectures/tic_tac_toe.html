@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 300px;
+            height: 300px;
+        }
+
+        .cell {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const board = document.querySelector(".board");
+            const cells = [];
+
+            let currentPlayer = "X";
+            let gameOver = false;
+
+            // Create the board
+            for (let i = 0; i < 9; i++) {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.dataset.index = i;
+                cells.push(cell);
+                board.appendChild(cell);
+
+                cell.addEventListener("click", handleCellClick);
+            }
+
+            function handleCellClick() {
+                if (gameOver) return;
+                if (this.textContent !== "") return;
+
+                this.textContent = currentPlayer;
+                checkWinningConditions(currentPlayer);
+
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
+            }
+
+            function checkWinningConditions(player) {
+                const winningConditions = [
+                    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                    [0, 4, 8], [2, 4, 6] // Diagonals
+                ];
+
+                for (let condition of winningConditions) {
+                    const [a, b, c] = condition;
+                    if (
+                        cells[a].textContent === player &&
+                        cells[b].textContent === player &&
+                        cells[c].textContent === player
+                    ) {
+                        announceWinner(player);
+                        return;
+                    }
+                }
+
+                if (isBoardFull()) {
+                    announceDraw();
+                }
+            }
+
+            function isBoardFull() {
+                return cells.every(cell => cell.textContent !== "");
+            }
+
+            function announceWinner(player) {
+                gameOver = true;
+                alert("Player " + player + " wins!");
+                resetBoard();
+            }
+
+            function announceDraw() {
+                gameOver = true;
+                alert("It's a draw!");
+                resetBoard();
+            }
+
+            function resetBoard() {
+                cells.forEach(cell => {
+                    cell.textContent = "";
+                });
+
+                currentPlayer = "X";
+                gameOver = false;
+            }
+        });
+
+
+       
+    </script>
+</body>
+</html>

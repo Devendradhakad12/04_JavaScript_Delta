@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46_promise</title>
+</head>
+<body>
+        <script>
+            //promise
+            let promise = new Promise(function (resolve,reject) {
+               alert('hello') 
+               resolve(56)
+            })
+            console.log('hello one')
+            setTimeout(function () {
+                console.log("Hello Tow in 2 second")
+                
+            },2000)
+console.log("Hello three")
+console.log(promise)
+
+        </script>
+
+</body>
+</html>

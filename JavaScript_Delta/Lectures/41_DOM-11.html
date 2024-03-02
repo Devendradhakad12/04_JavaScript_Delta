@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>41_DOM-11 :-> Keyboard Events & Form Events</title>
+  </head>
+  <body>
+
+ <form action="/action">
+    <input type="text" placeholder="Type anything " id="inp" />
+    <button id="btn">Submit & doubleClick</button>
+ </form>
+
+    <script>
+
+      //1 . mouseEvent
+      let btn = document.getElementById("btn");
+      btn.addEventListener("dblclick", (e) => {
+        console.log(e);
+      });
+
+      //2. keyboard Event
+      let inp = document.getElementById('inp');
+      inp.addEventListener('keydown',(e)=>{
+        console.log(e)
+        console.log('key was presssed')
+        console.log('keycode - ',e.code)
+        console.log('key - ',e.key)
+      })
+      inp.addEventListener('keyup',()=>{
+        console.log('key was released')
+      })
+
+
+      //3. Form events
+      let form = document.querySelector('form');
+      form.addEventListener('submit',(event)=>{
+        event.preventDefault()
+        console.log('from submited')
+      })
+
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70_Constructor overriding</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(name){
+                console.log("Employee's constructor is here :" + this.name)
+                this.name = name
+            }
+            login(){
+                console.log(`Employee has logged in`)
+            }
+            logout(){
+                console.log(`Employee has logged out`)
+            }
+            requestLeaves(leaves){
+                console.log(`Employee has requested ${leaves} leaves`)
+            }
+        }
+        class Programmer extends Employee{
+           constructor(name){
+            super(name) // use supe keyword before this keyword
+            console.log(`This is a newly wriiten constructor `)
+            this.name
+           }
+
+          /*  constructor(...args){
+               super(...args)            -> If there is no constructor in child class, this is create autometically by js engian
+          } */
+            requestCoffee(x){
+                console.log(`Employee has requested ${x} coffees `)
+            }
+            requestLeaves(leaves){
+                super.requestLeaves(leaves)
+                console.log("One extra is granted")
+               // console.log(`Employee has requested ${leaves+1} leaves (one extra)`)
+            }
+        }
+        let e = new Employee()
+        e.login()
+        e.requestLeaves(3)
+        let e1  = Programmer("pavan")
+        e1.login()
+        e1.requestLeaves(3)
+
+
+
+
+    </script>
+</body>
+</html>

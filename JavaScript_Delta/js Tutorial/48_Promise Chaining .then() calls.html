@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48_Promise Chaining .then() calls</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log("Resolved after 3 second")
+                resolve(23)
+            }, 1000);
+        })
+
+        //Promise chaining
+        p1.then((value)=>{
+            console.log(value)
+            p2 = new Promise((resolve,reject)=>{
+              setTimeout(() => {
+                resolve("promise p2")
+              }, 2000);
+            }) 
+            return p2
+        }).then((value)=>{
+            console.log("we are done")
+          return 4
+        }).then((value)=>{
+            setTimeout(() => {
+                console.log("pakka done")
+                console.log(value)
+             }, 3000);
+             return 6
+        }).then((value)=>{
+            setTimeout(() => {
+                console.log("pakka pakka done")
+                console.log(value)
+             }, 4000);
+        })
+
+
+
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

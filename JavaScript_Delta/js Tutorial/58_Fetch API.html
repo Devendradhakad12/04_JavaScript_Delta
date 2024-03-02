@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58_Fetch API</title>
+</head>
+<body>
+    <script>
+        //https://www.7timer.info/bin/api.pl?lon=-122.057&lat=37.419&product=meteo&output=json
+        //https://goweather.herokuapp.com/weather/Ny
+        let p = fetch("https://www.7timer.info/bin/api.pl?lon=-122.057&lat=37.419&product=meteo&output=json")
+
+        p.then((response)=>{
+          //  return response
+         
+           console.log(response.status)
+           console.log(response.ok)
+           console.log(response.headers)
+          
+              // return response.text() 
+           return response.json()
+           //return response.formData()
+        }).then((value1)=>{
+            console.log(value1)
+        })
+    </script>
+</body>
+</html>

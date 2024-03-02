@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>38_DOM-08 - DOM Events</title>
+    <style>
+      button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DOM Events -> Events are signals that something has occured.(user inputs / actions) -->
+
+    <!--! 1. onclick -->
+    <!--    <button
+      id="btn"
+      onclick="document.getElementsByTagName('body')[0].firstElementChild.innerHTML= 'clicked'"
+    >
+      Click Me!
+    </button> -->
+    <button id="btn">Change Color of body !</button>
+
+    <script>
+      let changeCol = () => {
+        let body = document.getElementsByTagName("body")[0];
+        let math = Math.floor(Math.random() * 6);
+        let color = ["red", "green", "black", "yellow", "hotpink", "blue"];
+        body.style.backgroundColor = color[math];
+      };
+
+      let btn = document.getElementById("btn");
+      console.dir(btn);
+
+      //1.onclick
+      btn.onclick = () => {
+        console.log("btn clicked");
+      };
+
+      // 2. onmouseseenter - when mouse enters an element
+      btn.onmouseenter = changeCol;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38_Browser Events</title>
+    <style>
+        .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       height: 100vh;
+        }
+        #btn{
+            height: 30px;
+            width: auto;
+            border-radius: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onmouseenter="console.log('mouse is enterd in container')">
+<!--         <button onclick="  let a = 6 ; console.log(a);">click </button> -->
+        <button id = "btn">click me to change Bg</button>
+    </div>
+</body>
+<script>
+
+/*     let d = document. getElementsByClassName('container')[0]
+    d.onclick = ()=>{
+        let  c = document. getElementsByClassName('container')[0]
+        c.innerHTML ="hello world"
+    } */
+
+    let btn = document.getElementById('btn')
+    let body = document.getElementsByTagName('body')[0]
+/*     let math = Math.floor(Math.random()*6)
+    let color = ['red','green','black','yellow','hotpink','blue'][math] */
+    btn.addEventListener('click',changebg)
+
+function changebg(){
+    let math = Math.floor(Math.random()*6)
+    let color = ['red','green','black','yellow','hotpink','blue'][math]
+    body.style.backgroundColor = color
+    console.log(math)
+}
+    //explore all events on mdn
+</script>
+</html> 
