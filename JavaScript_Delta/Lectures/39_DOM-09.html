@@ -15,22 +15,26 @@
       /* for all eventlisteners visit mdn */
 
       //1. click
-      btn.addEventListener('click',()=>{
-        console.log('clicked')
-      })
+      btn.addEventListener("click", () => {
+        console.log("clicked");
+      });
 
-      //2. doubleClick 
-      btn.addEventListener('dblclick',()=>{
-        console.log('double clicked')
-      })
+      //2. doubleClick
+      btn.addEventListener("dblclick", () => {
+        localStorage.setItem("dev", JSON.stringify("hello"));
+        sessionStorage.setItem("dev", JSON.stringify("world"));
+        console.log("double clicked");
+      });
 
       //visit w3Schools for more
 
       //3. EventListener on Elements
-      let p = document.getElementById('para')
-      p.addEventListener('mouseenter',()=>{
-        p.innerHTML += ` clicked and your number ${Math.floor(Math.random()*100)}`;
-      })
+      let p = document.getElementById("para");
+      p.addEventListener("mouseenter", () => {
+        p.innerHTML += ` clicked and your number ${Math.floor(
+          Math.random() * 100
+        )}`;
+      });
     </script>
   </body>
 </html>

@@ -30,3 +30,6 @@ console.log(z); // Output: undefined
 let dynamicVariable = 42; // Number
 dynamicVariable = "Hello"; // String
 dynamicVariable = true; // Boolean
+
+
+ 
