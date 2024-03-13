@@ -1,0 +1,140 @@
+body {
+  font-family: sans-serif;
+  padding: 0 10px;
+  min-height: 100vh;
+ 
+}
+:root {
+  --btn: #dbdbdb;
+  --btn-hover: #cacaca;
+  --item-bg: #f0f0f0;
+  --modal-bg: rgba(131, 141, 141, 0.541);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--btn);
+  cursor: pointer;
+}
+.employees {
+  display: flex;
+  width: 100%;
+}
+.employees > div {
+  border: 1px solid black;
+  overflow-y: scroll;
+  width: 100%;
+  height: 450px;
+}
+
+.employees__names {
+  width: 30%;
+}
+.employees__single{
+  width: 70%;
+}
+
+.employees__names,
+.employees__single{
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.employees__names--title,
+.employees__single--title{
+  padding-bottom:10px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.employees_name--list{
+  display: flex;
+  flex-direction: column;
+  
+}
+.employee__names--item{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--item-bg);
+  margin: 5px auto;
+  width: 50%;
+}
+.employee__names--item:hover,
+.selected{
+  background-color: var(--btn);
+}
+
+
+.employeeDelete{
+  cursor: pointer;
+}
+.employee_single--info{
+  display: flex;
+  flex-direction: column;
+    margin-left: 40px;
+ 
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 10px;
+}
+input{
+  padding: 5px 10px ;
+  font-size: 17px;
+}
+.addEmployee{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--modal-bg);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+form{
+  text-align: center;
+}
+.submitBtn{
+  font-size: 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--btn);
+  cursor: pointer;
+  transition: all 0.1s;
+  margin-top: 15px;
+}
+.submitBtn:hover{
+  background-color:var(--btn-hover);
+  transform: scale(1.1);
+}
+.submitBtn:active{
+  background-color:var(--btn);
+  transform: scale(1);
+  box-shadow: 2px 3px 15px black;
+}
+.formTitle{
+ font-size: 25px;
+}  

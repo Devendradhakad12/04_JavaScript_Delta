@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Devnedra",
+        "age":19,
+        "email":"dev@gmail.com",
+        "phone":3453213,
+        "id":342134
+    },
+    {
+        "name":"Pavan",
+        "age":20,
+        "email":"pavan@gmail.com",
+        "phone":56435,
+        "id":4564324
+    },
+    {
+        "name":"Ajay",
+        "age":19,
+        "email":"ajay@gmail.com",
+        "phone":23422343,
+        "id":123423
+    },
+    {
+        "name":"Bharat",
+        "age":21,
+        "email":"bharat@gmail.com",
+        "phone":543454,
+        "id":686754
+    }
+]

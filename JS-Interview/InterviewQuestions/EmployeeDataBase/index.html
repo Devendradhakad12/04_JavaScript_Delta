@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Employee Database Managment</h1>
+        <button class="createEmpolyee">Add Employee</button>
+      </header>
+    </div>
+
+    <div class="employees">
+      <div id="employees__names">
+        <span class="employees__names--title">Employees List</span>
+        <div class="employees_name--list"></div>
+      </div>
+
+      <div id="employees__single">
+        <span class="employees__single--title">Employees Information</span>
+        <div class="employee_single--info"></div>
+      </div>
+    </div>
+
+    <!--  Add Empolyee Modal -->
+    <div class="addEmployee">
+      <form class="addEmployee__create">
+      <h3 class="formTitle">  Add a new Employee</h3>
+        <div class="inputs">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="number" name="phone" placeholder="Phone" required>
+          <input type="date" class="dateInp" name="DOB" placeholder="Age" required>
+          <button class="submitBtn">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

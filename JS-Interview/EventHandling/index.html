@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+        parent
+      <div id="child">child1</div>
+      <div id="child">child2</div>
+      <div id="child">child3</div>
+      <div id="child">child4</div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("parent").addEventListener('click',(e)=>{
+    console.log(e.target.textContent)
+    },true)
+
+  </script>
+</html>
